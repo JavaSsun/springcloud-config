@@ -1,3 +1,6 @@
+tranch:
+  release
+
 eureka:
   client:
     service-url:
