@@ -3,8 +3,8 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 spring:
-application:
-name: hello-service
+  application:
+    name: hello-service
 server:
   port: 8989
   
