@@ -1,0 +1,10 @@
+#暴露服务，并向eureka的注册中心 注册服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka
+spring:
+  application:
+    name: hello-service
+server:
+  port: 8989
