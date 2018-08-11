@@ -7,3 +7,5 @@ spring:
     name: hello-service
 server:
   port: 8989
+book:
+  nane: zhangsan
