@@ -1,0 +1,29 @@
+env: dev
+  
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.121.100:3306/world?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatement=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8081
+logging:
+  level:
+    org:
+      springframework:
+        web: info
+        transaction: info
+    com:
+      example:
+        mybatisgenerator:
+          mapper: error
+
+mybatis:
+  # 扫描 mapper.xml文件，否则 mapper.xml中 SQL 代码不起作用
+  mapper-locations: classpath:mapper/*.xml
+  # 实体类所在的包，避免使用繁琐的全限定名
+  type-aliases-package: com.example.mybatisgenerator.entity
+  configuration:
+    map-underscore-to-camel-case: true
